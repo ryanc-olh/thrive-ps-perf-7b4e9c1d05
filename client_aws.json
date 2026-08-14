@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-13T19:42:03-05:00",
- "generated_at_ct": "7:42pm",
+ "generated_at": "2026-08-13T21:28:35-05:00",
+ "generated_at_ct": "9:28pm",
  "window": {
   "start": "2026-08-06",
   "end": "2026-08-12"
@@ -112,16 +112,16 @@
    }
   },
   "today": {
-   "offered": 29,
-   "answered": 27,
-   "offered_live": 29,
-   "answered_live": 27,
-   "answered_in_sl": 25,
+   "offered": 30,
+   "answered": 28,
+   "offered_live": 30,
+   "answered_live": 28,
+   "answered_in_sl": 26,
    "short_abandoned": 0,
-   "sl_den": 29,
-   "sl": 86.21,
-   "asa_s": 29.7,
-   "aht_s": 797.6
+   "sl_den": 30,
+   "sl": 86.67,
+   "asa_s": 28.9,
+   "aht_s": 804.2
   }
  },
  "chat_informational": {
@@ -1942,10 +1942,10 @@
     0
    ],
    [
-    0,
-    0,
-    0,
-    0,
+    1,
+    1,
+    9074,
+    1,
     1,
     0,
     1
@@ -1964,9 +1964,9 @@
     0,
     0,
     0,
+    1,
     0,
-    0,
-    0
+    1
    ],
    [
     0,
