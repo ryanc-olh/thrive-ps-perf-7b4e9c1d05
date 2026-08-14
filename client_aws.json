@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-14T09:24:30-05:00",
- "generated_at_ct": "9:24am",
+ "generated_at": "2026-08-14T13:26:34-05:00",
+ "generated_at_ct": "1:26pm",
  "window": {
   "start": "2026-08-07",
   "end": "2026-08-13"
@@ -35,6 +35,7 @@
     "short_abandoned": 0,
     "sl_den": 24,
     "sl": 95.83,
+    "sl_answered_only": 95.83,
     "asa_s": 10.0,
     "aht_s": 849.5
    },
@@ -47,6 +48,7 @@
     "short_abandoned": 0,
     "sl_den": 17,
     "sl": 94.12,
+    "sl_answered_only": 94.12,
     "asa_s": 48.3,
     "aht_s": 611.1
    },
@@ -59,6 +61,7 @@
     "short_abandoned": 0,
     "sl_den": 12,
     "sl": 75.0,
+    "sl_answered_only": 75.0,
     "asa_s": 41.3,
     "aht_s": 855.7
    },
@@ -71,6 +74,7 @@
     "short_abandoned": 0,
     "sl_den": 32,
     "sl": 90.62,
+    "sl_answered_only": 90.62,
     "asa_s": 22.8,
     "aht_s": 877.8
    },
@@ -83,6 +87,7 @@
     "short_abandoned": 0,
     "sl_den": 14,
     "sl": 100.0,
+    "sl_answered_only": 100.0,
     "asa_s": 8.2,
     "aht_s": 566.4
    },
@@ -95,6 +100,7 @@
     "short_abandoned": 0,
     "sl_den": 38,
     "sl": 84.21,
+    "sl_answered_only": 84.21,
     "asa_s": 58.1,
     "aht_s": 842.1
    },
@@ -107,21 +113,23 @@
     "short_abandoned": 0,
     "sl_den": 30,
     "sl": 90.0,
+    "sl_answered_only": 90.0,
     "asa_s": 28.2,
     "aht_s": 810.8
    }
   },
   "today": {
-   "offered": 7,
-   "answered": 7,
-   "offered_live": 7,
-   "answered_live": 7,
-   "answered_in_sl": 4,
+   "offered": 23,
+   "answered": 22,
+   "offered_live": 23,
+   "answered_live": 22,
+   "answered_in_sl": 16,
    "short_abandoned": 0,
-   "sl_den": 7,
-   "sl": 57.14,
-   "asa_s": 136.8,
-   "aht_s": 553.6
+   "sl_den": 23,
+   "sl": 69.57,
+   "sl_answered_only": 69.57,
+   "asa_s": 68.5,
+   "aht_s": 650.1
   }
  },
  "chat_informational": {
@@ -227,15 +235,15 @@
   },
   "today": {
    "offered": 0,
-   "answered": 10,
-   "offered_live": 10,
-   "answered_live": 10,
-   "answered_in_sl": 10,
+   "answered": 32,
+   "offered_live": 32,
+   "answered_live": 32,
+   "answered_in_sl": 32,
    "short_abandoned": 0,
-   "sl_den": 10,
+   "sl_den": 32,
    "sl_secs": 30,
    "sl": 100.0,
-   "asa_s": 7.5,
+   "asa_s": 7.4,
    "aht_s": null,
    "hours_ct": "06:00-18:59"
   },
@@ -1852,49 +1860,49 @@
     5
    ],
    [
+    3,
+    1,
+    896382,
+    3,
     2,
     0,
-    887584,
-    2,
-    0,
-    0,
-    0
+    2
    ],
    [
+    3,
+    3,
+    26315,
+    3,
+    3,
     0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    3
    ],
    [
+    3,
+    3,
+    28244,
+    3,
+    3,
     0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    3
    ],
    [
+    5,
+    4,
+    254218,
+    5,
+    5,
     0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    5
    ],
    [
+    3,
+    1,
+    231808,
+    3,
+    3,
     0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    3
    ],
    [
     0,
