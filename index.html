@@ -47,23 +47,23 @@
 <body>
 <div class="wrap">
   <h1>Thrive Le-Vel — Patient Support Performance</h1>
-  <div class="sub">Aug 7–13, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 5:37pm CDT</b></div>
+  <div class="sub">Aug 7–13, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 9:30pm CDT</b></div>
   
   <div id="pane-sum">
 
   <div class="sec" style="border-color:var(--amb);">Today so far · Fri Aug 14 <span style="font-weight:400;color:var(--amb);font-size:13px;">— in progress</span></div>
   <div class="note" style="margin:-8px 0 12px;">Preliminary — feeds refresh at different rates, so each tile shows its own "as of" time.</div>
   <div class="grid kpis">
-    <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">31</div><div class="n" id="tvVn">as of ~8:30a CT</div></div>
-    <div class="card"><div class="k">Email — received</div><div class="v">20</div><div class="n">as of ~12:30p CT</div></div>
-    <div class="card"><div class="k">Email — open backlog</div><div class="v">35</div><div class="n">as of ~12:30p CT</div></div>
-    <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">43</div><div class="n" id="tvCn">as of ~8:30a CT</div></div>
+    <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">31</div><div class="n" id="tvVn">as of ~3p CT</div></div>
+    <div class="card"><div class="k">Email — received</div><div class="v">20</div><div class="n">as of ~4:30p CT</div></div>
+    <div class="card"><div class="k">Email — open backlog</div><div class="v">35</div><div class="n">as of ~4:30p CT</div></div>
+    <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">43</div><div class="n" id="tvCn">as of ~3p CT</div></div>
   </div>
 
   <!-- id so the live patcher refreshes this. It is a BUILD-TIME substitution, so while the tile above
        said "updated 11:44am" this still read 11:00 and made a perfectly healthy feed look dead
        (Ryan 2026-08-14). Two stamps for the same feed must never disagree. -->
-  <div class="sec">Voice <span style="font-weight:400;color:var(--mut);font-size:12px;" id="vStamp">· updated through ~8:30a CT</span></div>
+  <div class="sec">Voice <span style="font-weight:400;color:var(--mut);font-size:12px;" id="vStamp">· updated through ~3p CT</span></div>
   
   <div class="grid kpis">
     <!-- ids so the 5-minute feed can patch these. They report TODAY, so without patching they froze at
@@ -94,10 +94,10 @@
     <div><div class="lbl" style="margin-top:0;">Inbound Volume by Day</div><div class="cbox"><canvas id="c1"></canvas></div></div>
     <div><div class="lbl" style="margin-top:0;">Answered ≤30s by Day (Target 80%)</div><div class="cbox"><canvas id="c2"></canvas></div></div>
   </div>
-  <div class="note">* Fri Aug 14 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~8:30a CT</span>, email to ~12:30p CT); not comparable to the full days and excluded from the Aug 7–13 total.<br>
+  <div class="note">* Fri Aug 14 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~3p CT</span>, email to ~4:30p CT); not comparable to the full days and excluded from the Aug 7–13 total.<br>
   &ldquo;Answered &le;30s&rdquo; is the Amazon Connect service-level measure: calls that left the queue within 30 seconds, whether an agent answered or the caller disconnected.</div>
 
-  <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~12:30p CT</span></div>
+  <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~4:30p CT</span></div>
   <div class="note" style="margin:-2px 0 8px;">Received &amp; Resolved reflect <b>patient messages only</b> — automated notifications, marketing, vendor, and system email are excluded (classified from message content).</div>
   <div class="grid kpis">
     <div class="card"><div class="k">Received</div><div class="v">20</div><div class="n">Fri Aug 14 so far</div></div>
@@ -118,17 +118,17 @@
       <tr><td>Mon 8/10</td><td>33</td><td>37</td><td class="grn">-4</td><td class="red">17%</td></tr>
       <tr><td>Tue 8/11</td><td>35</td><td>28</td><td>+7</td><td class="red">12%</td></tr>
       <tr><td>Wed 8/12</td><td>31</td><td>48</td><td class="grn">-17</td><td class="red">13%</td></tr>
-      <tr><td>Thu 8/13</td><td>26</td><td>37</td><td class="grn">-11</td><td class="red">47%</td></tr>
+      <tr><td>Thu 8/13</td><td>26</td><td>37</td><td class="grn">-11</td><td class="red">38%</td></tr>
       <tr class="tot"><td>Aug 7–13</td><td>214</td><td>228</td><td>-14</td><td class="red">20%</td></tr>
       <tr class="amb"><td>Fri 8/14*</td><td>20</td><td>23</td><td>-3</td><td>—</td></tr>
     </tbody>
   </table>
-  <div class="note">* Fri Aug 14 (amber) is partial — received/resolved so far (email feed to ~12:30p CT); excluded from the Aug 7–13 total.</div>
+  <div class="note">* Fri Aug 14 (amber) is partial — received/resolved so far (email feed to ~4:30p CT); excluded from the Aug 7–13 total.</div>
 
   
 
   
-  <div class="sec">Chat <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~8:30a CT</span></div>
+  <div class="sec">Chat <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~3p CT</span></div>
   
   <div class="grid kpis">
     <div class="card"><div class="k">Answered ≤30s</div><div class="v grn">98%</div><div class="n">Aug 7–13 · Target 90%</div></div>
@@ -149,7 +149,7 @@
       <tr class="amb"><td>Fri 8/14*</td><td>43</td><td>100%</td><td>0.1m</td></tr>
     </tbody>
   </table>
-  <div class="note">* Fri Aug 14 (amber) is partial — chats so far (voice/chat feed to ~8:30a CT); excluded from the Aug 7–13 total.</div>
+  <div class="note">* Fri Aug 14 (amber) is partial — chats so far (voice/chat feed to ~3p CT); excluded from the Aug 7–13 total.</div>
   
 
   <div class="sec">Intraday by Hour</div>
