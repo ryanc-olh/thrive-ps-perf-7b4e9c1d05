@@ -47,23 +47,23 @@
 <body>
 <div class="wrap">
   <h1>Thrive Le-Vel — Patient Support Performance</h1>
-  <div class="sub">Aug 8–14, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 1:34pm CDT</b></div>
+  <div class="sub">Aug 8–14, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 5:33pm CDT</b></div>
   
   <div id="pane-sum">
 
   <div class="sec" style="border-color:var(--amb);">Today so far · Sat Aug 15 <span style="font-weight:400;color:var(--amb);font-size:13px;">— in progress</span></div>
   <div class="note" style="margin:-8px 0 12px;">Preliminary — feeds refresh at different rates, so each tile shows its own "as of" time.</div>
   <div class="grid kpis">
-    <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">3</div><div class="n" id="tvVn">as of ~10a CT</div></div>
+    <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">3</div><div class="n" id="tvVn">as of ~4:30p CT</div></div>
     <div class="card"><div class="k">Email — received</div><div class="v">0</div><div class="n">as of Fri 8/14, ~4:30p CT</div></div>
     <div class="card"><div class="k">Email — open backlog</div><div class="v">35</div><div class="n">as of Fri 8/14, ~4:30p CT</div></div>
-    <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">8</div><div class="n" id="tvCn">as of ~10a CT</div></div>
+    <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">8</div><div class="n" id="tvCn">as of ~4:30p CT</div></div>
   </div>
 
   <!-- id so the live patcher refreshes this. It is a BUILD-TIME substitution, so while the tile above
        said "updated 11:44am" this still read 11:00 and made a perfectly healthy feed look dead
        (Ryan 2026-08-14). Two stamps for the same feed must never disagree. -->
-  <div class="sec">Voice <span style="font-weight:400;color:var(--mut);font-size:12px;" id="vStamp">· updated through ~10a CT</span></div>
+  <div class="sec">Voice <span style="font-weight:400;color:var(--mut);font-size:12px;" id="vStamp">· updated through ~4:30p CT</span></div>
   
   <div class="grid kpis">
     <!-- ids so the 5-minute feed can patch these. They report TODAY, so without patching they froze at
@@ -94,7 +94,7 @@
     <div><div class="lbl" style="margin-top:0;">Inbound Volume by Day</div><div class="cbox"><canvas id="c1"></canvas></div></div>
     <div><div class="lbl" style="margin-top:0;">Answered ≤30s by Day (Target 80%)</div><div class="cbox"><canvas id="c2"></canvas></div></div>
   </div>
-  <div class="note">* Sat Aug 15 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~10a CT</span>, email to Fri 8/14, ~4:30p CT); not comparable to the full days and excluded from the Aug 8–14 total.<br>
+  <div class="note">* Sat Aug 15 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~4:30p CT</span>, email to Fri 8/14, ~4:30p CT); not comparable to the full days and excluded from the Aug 8–14 total.<br>
   &ldquo;Answered &le;30s&rdquo; is the Amazon Connect service-level measure: calls that left the queue within 30 seconds, whether an agent answered or the caller disconnected.</div>
 
   <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through Fri 8/14, ~4:30p CT</span></div>
@@ -128,7 +128,7 @@
   
 
   
-  <div class="sec">Chat <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~10a CT</span></div>
+  <div class="sec">Chat <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through ~4:30p CT</span></div>
   
   <div class="grid kpis">
     <div class="card"><div class="k">Answered ≤30s</div><div class="v grn">98%</div><div class="n">Aug 8–14 · Target 90%</div></div>
@@ -149,7 +149,7 @@
       <tr class="amb"><td>Sat 8/15*</td><td>8</td><td>100%</td><td>0.1m</td></tr>
     </tbody>
   </table>
-  <div class="note">* Sat Aug 15 (amber) is partial — chats so far (voice/chat feed to ~10a CT); excluded from the Aug 8–14 total.</div>
+  <div class="note">* Sat Aug 15 (amber) is partial — chats so far (voice/chat feed to ~4:30p CT); excluded from the Aug 8–14 total.</div>
   
 
   <div class="sec">Intraday by Hour</div>
