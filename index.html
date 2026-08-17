@@ -47,7 +47,7 @@
 <body>
 <div class="wrap">
   <h1>Thrive Le-Vel — Patient Support Performance</h1>
-  <div class="sub">Aug 9–15, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 11:03pm CDT</b></div>
+  <div class="sub">Aug 9–15, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 11:43pm CDT</b></div>
   
   <div id="pane-sum">
 
@@ -94,14 +94,14 @@
     <div><div class="lbl" style="margin-top:0;">Inbound Volume by Day</div><div class="cbox"><canvas id="c1"></canvas></div></div>
     <div><div class="lbl" style="margin-top:0;">Answered ≤30s by Day (Target 80%)</div><div class="cbox"><canvas id="c2"></canvas></div></div>
   </div>
-  <div class="note">* Sun Aug 16 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~4:30p CT</span>, email to Sat 8/15, ~9p CT); not comparable to the full days and excluded from the Aug 9–15 total.<br>
+  <div class="note">* Sun Aug 16 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~4:30p CT</span>, email to <span class="eLat">Sat 8/15, ~9p CT</span>); not comparable to the full days and excluded from the Aug 9–15 total.<br>
   &ldquo;Answered &le;30s&rdquo; is the service-level measure: calls that left the queue within 30 seconds, whether an agent answered or the caller disconnected.</div>
 
-  <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through Sat 8/15, ~9p CT</span></div>
+  <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;" id="eStamp">· updated through Sat 8/15, ~9p CT</span></div>
   <div class="note" style="margin:-2px 0 8px;">Received &amp; Resolved reflect <b>patient messages only</b> — automated notifications, marketing, vendor, and system email are excluded (classified from message content).</div>
   <div class="grid kpis">
-    <div class="card"><div class="k">Received</div><div class="v">0</div><div class="n">Sun Aug 16 so far</div></div>
-    <div class="card"><div class="k">Resolved</div><div class="v">0</div><div class="n">Sun Aug 16 so far</div></div>
+    <div class="card"><div class="k">Received</div><div class="v" id="keREC2">0</div><div class="n">Sun Aug 16 so far</div></div>
+    <div class="card"><div class="k">Resolved</div><div class="v" id="keRES">0</div><div class="n">Sun Aug 16 so far</div></div>
     <!-- FRT stays on the MATURED window (d0..yesterday), NOT today: a ticket created an hour ago has not
          had 4 hours to be replied to, so scoring today understates it badly and build_dashboards' frt
          query deliberately stops at mature_end. Today would read "—" forever. -->
@@ -120,10 +120,10 @@
       <tr><td>Fri 8/14</td><td>29</td><td>34</td><td class="grn">-5</td><td class="red">33%</td></tr>
       <tr><td>Sat 8/15</td><td>24</td><td>30</td><td class="grn">-6</td><td class="red">33%</td></tr>
       <tr class="tot"><td>Aug 9–15</td><td>209</td><td>248</td><td>-39</td><td class="red">21%</td></tr>
-      <tr class="amb"><td>Sun 8/16*</td><td>0</td><td>0</td><td>+0</td><td>—</td></tr>
+      <tr class="amb" id="eTodayRow"><td>Sun 8/16*</td><td>0</td><td>0</td><td>+0</td><td>—</td></tr>
     </tbody>
   </table>
-  <div class="note">* Sun Aug 16 (amber) is partial — received/resolved so far (email feed to Sat 8/15, ~9p CT); excluded from the Aug 9–15 total.</div>
+  <div class="note">* Sun Aug 16 (amber) is partial — received/resolved so far (email feed to <span class="eLat">Sat 8/15, ~9p CT</span>); excluded from the Aug 9–15 total.</div>
 
   
 
@@ -321,8 +321,23 @@
       /* Email — received tile, live (attached by the live puller when the email feed is fresh).
          Guards against the nightly source lagging behind the live systems. */
       if(f.email_live && f.email_live.rec!=null){
+        var eAs=(f.email_live.asof_ct||'')+' CT';
         txt('keREC',comma(f.email_live.rec));
-        txt('keLat','live · as of '+(f.email_live.asof_ct||'')+' CT');
+        txt('keLat','live · as of '+eAs);
+        txt('keREC2',comma(f.email_live.rec));
+        txt('eStamp','· updated through '+eAs+' (live)');
+        var eln=document.getElementsByClassName('eLat');
+        for(var i=0;i<eln.length;i++) eln[i].textContent=eAs+' (live)';
+        var er=document.getElementById('eTodayRow');
+        if(er&&er.children.length>=4){
+          er.children[1].textContent=comma(f.email_live.rec);
+          if(f.email_live.clo!=null){
+            txt('keRES',comma(f.email_live.clo));
+            er.children[2].textContent=comma(f.email_live.clo);
+            var nt=f.email_live.rec-f.email_live.clo;
+            er.children[3].textContent=(nt>=0?'+':'')+comma(nt);
+          }
+        }
       }
 
       /* Today's point in the by-day charts. Without this the tables say one thing and the chart beside
