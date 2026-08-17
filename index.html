@@ -47,7 +47,7 @@
 <body>
 <div class="wrap">
   <h1>Thrive Le-Vel — Patient Support Performance</h1>
-  <div class="sub">Aug 9–15, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 9:27pm CDT</b></div>
+  <div class="sub">Aug 9–15, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b>page rebuilt 11:03pm CDT</b></div>
   
   <div id="pane-sum">
 
@@ -55,7 +55,7 @@
   <div class="note" style="margin:-8px 0 12px;">Preliminary — feeds refresh at different rates, so each tile shows its own "as of" time.</div>
   <div class="grid kpis">
     <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">9</div><div class="n" id="tvVn">as of ~4:30p CT</div></div>
-    <div class="card"><div class="k">Email — received</div><div class="v">0</div><div class="n">as of Sat 8/15, ~9p CT</div></div>
+    <div class="card"><div class="k">Email — received</div><div class="v" id="keREC">0</div><div class="n" id="keLat">as of Sat 8/15, ~9p CT</div></div>
     <div class="card"><div class="k">Email — open backlog</div><div class="v">30</div><div class="n">as of Sat 8/15, ~9p CT</div></div>
     <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">14</div><div class="n" id="tvCn">as of ~4:30p CT</div></div>
   </div>
@@ -69,7 +69,7 @@
     <!-- ids so the 5-minute feed can patch these. They report TODAY, so without patching they froze at
          build time while the today ROW beside them kept updating live -- the tiles read 2,130/41% against
          a row saying 2,339/38% (2026-08-14). Abandonment is deliberately given NO id: it is patient-level
-         from Zoho and the feed cannot compute it, exactly as the row's abandon cell is left alone. -->
+         from the build and the feed cannot compute it, exactly as the row's abandon cell is left alone. -->
     <div class="card"><div class="k">Answered ≤30s</div><div class="v amb" id="kvSL">67%</div><div class="n">Sun Aug 16 so far · Target 80%</div></div>
     <div class="card"><div class="k">Abandonment</div><div class="v ">—</div><div class="n">Sun Aug 16 so far · Target &lt;5%</div></div>
     <div class="card"><div class="k">Avg Speed of Answer</div><div class="v amb" id="kvASA">0.5m</div><div class="n">Sun Aug 16 so far · Target ≤30s</div></div>
@@ -95,7 +95,7 @@
     <div><div class="lbl" style="margin-top:0;">Answered ≤30s by Day (Target 80%)</div><div class="cbox"><canvas id="c2"></canvas></div></div>
   </div>
   <div class="note">* Sun Aug 16 (amber) is a partial day — data received so far (voice feed current to <span id="vLat2">~4:30p CT</span>, email to Sat 8/15, ~9p CT); not comparable to the full days and excluded from the Aug 9–15 total.<br>
-  &ldquo;Answered &le;30s&rdquo; is the Amazon Connect service-level measure: calls that left the queue within 30 seconds, whether an agent answered or the caller disconnected.</div>
+  &ldquo;Answered &le;30s&rdquo; is the service-level measure: calls that left the queue within 30 seconds, whether an agent answered or the caller disconnected.</div>
 
   <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;">· updated through Sat 8/15, ~9p CT</span></div>
   <div class="note" style="margin:-2px 0 8px;">Received &amp; Resolved reflect <b>patient messages only</b> — automated notifications, marketing, vendor, and system email are excluded (classified from message content).</div>
@@ -186,7 +186,7 @@
     <ul>
       <li><b>Inbound Volume</b> &mdash; calls that reached a queue, including callbacks requested through the phone menu. Calls that resolve in the menu without reaching a queue are not counted.</li>
       <li><b>Answered</b> &mdash; calls where an agent connected.</li>
-      <li><b>% Answered &le;30s</b> &mdash; the Amazon Connect service-level measure: of live calls offered, the share that <b>left the queue within 30 seconds</b> — answered by an agent <i>or</i> disconnected by the caller. Hang-ups inside 30 seconds count as met; abandons after 30 seconds count against it. <b>Avg Speed of Answer</b> &mdash; the average wait before pickup, across calls that were answered. Callbacks are excluded from both: a callback&rsquo;s wait is the time until we ring back rather than hold time.</li>
+      <li><b>% Answered &le;30s</b> &mdash; the service-level measure: of live calls offered, the share that <b>left the queue within 30 seconds</b> — answered by an agent <i>or</i> disconnected by the caller. Hang-ups inside 30 seconds count as met; abandons after 30 seconds count against it. <b>Avg Speed of Answer</b> &mdash; the average wait before pickup, across calls that were answered. Callbacks are excluded from both: a callback&rsquo;s wait is the time until we ring back rather than hold time.</li>
       <li><b>Abandonment</b> &mdash; counted in <b>patients, not calls</b>: of the patients who reached a queue, the share who never connected with an agent and never received a callback attempt. A patient only counts at all if they connected, took a callback, or waited more than 30 seconds — someone whose only calls were &le;30-second hang-ups is excluded entirely. Each patient counts once however many times they call.</li>
     </ul>
     <div class="mh">Email</div>
@@ -229,7 +229,7 @@
   daySel.addEventListener('change',function(){render(daySel.value);});
   render(daySel.value);
   
-  /* Live hook for the 5-minute Connect feed. VOFF / VANS / render / renderHr are all closure-scoped in
+  /* Live hook for the 5-minute live feed. VOFF / VANS / render / renderHr are all closure-scoped in
      HERE, so the feed patcher (a separate IIFE below) cannot see them — which is why its first version
      silently did nothing: it tested window.VOFF, which is undefined. Exposing ONE function keeps this
      scope intact instead of leaking four globals, and keeps the row format in the file that defines it.
@@ -240,7 +240,7 @@
       /* [6] = inbound+callback arrived, which is what VOFF is (it must reconcile to by-day offered).
          [4] is inbound only — the SL denominator — and using it here understated the volume chart. */
       VOFF[k]=rows.map(function(r){return (r&&(r.length>6?r[6]:r[4]))||0;});
-      if(typeof VANS!=='undefined'&&VANS) VANS[k]=rows;      /* 6th element (sab) is ignored by 5-col mirror rows */
+      if(typeof VANS!=='undefined'&&VANS) VANS[k]=rows;      /* 6th element (sab) is ignored by 5-col build rows */
       if(daySel&&daySel.value===k) render(k);
       var hs=document.getElementById('hds'),pane=document.getElementById('pane-hr');
       if(hs&&hs.value===k&&pane&&pane.style.display!=='none'&&typeof renderHr==='function') renderHr(k);
@@ -250,22 +250,22 @@
 </script>
 
 <script>
-/* Near-real-time voice/chat from the Amazon Connect API.
-   The page is BUILT 4-hourly from the Zoho mirror; this refreshes only what actually changes between
+/* Near-real-time voice/chat from the live phone-system API.
+   The page is BUILT 4-hourly from the warehouse; this refreshes only what actually changes between
    builds — today's figures. Complete days are immutable once closed, and the weekly tiles are computed
    over complete days, so neither needs touching.
-   Abandonment is deliberately NOT patched: it is patient-level and a Connect contact carries no patient
-   identifier, so it stays on the Zoho build. Email likewise (Connect has no email channel).
+   Abandonment is deliberately NOT patched: it is patient-level and a live contact carries no patient
+   identifier, so it stays on the build. Email likewise (the phone feed has no email channel).
    Fails silent: if the feed is missing, broken or stale the build-time numbers stand. A wrong-but-fresh
    number is worse than a right-but-4-hours-old one on a client-facing page. */
 (function(){
   /* ENABLED 2026-08-13. The three defects this was gated on are fixed and verified in code, not assumed:
-       outbound  pull_client_aws builds allq = live + callback queues only, so the outbound DID is in no
+       outbound  the live puller builds allq = live + callback queues only, so the outbound DID is in no
                  metric (it was inflating Answered above Inbound Volume).
        callback  VOL_METRICS runs on allq but SL_METRICS runs on `live` alone, so callbacks count as
                  volume and are excluded from SL and ASA — a callback's queue time is time-to-ring-back.
        timezone  every bound is built with ZoneInfo("America/Chicago") and buckets are read through
-                 _iv(), which converts AWS's MetricInterval instead of string-slicing it.
+                 _iv(), which converts the API's MetricInterval instead of string-slicing it.
      Guarded by EXPECT_CLIENT (a group repo holds one feed for several pages), a BUILT_FOR date check and
      STALE_MIN. Fails silent: a wrong-but-fresh number is worse than a right-but-4-hours-old one. */
   var PATCH_ON = true;
@@ -312,11 +312,18 @@
           td[2].textContent=comma(v.answered);
           td[3].textContent=(v.sl==null?'—':Math.round(v.sl)+'%');
           td[4].textContent=asa(v.asa_s);
-          /* td[5] is abandonment — Zoho-sourced, left exactly as built */
+          /* td[5] is abandonment — patient-level, left exactly as built */
         }
       }
-      /* Chat tile deliberately NOT patched — chat stays on the Zoho build so that CHAT_SAMEDAY
-         (do not count SL/ASA for chats answered the next day) keeps applying. AWS cannot express it. */
+      /* Chat tile deliberately NOT patched — chat stays on the built numbers so that CHAT_SAMEDAY
+         (do not count SL/ASA for chats answered the next day) keeps applying; the live feed cannot express it. */
+
+      /* Email — received tile, live (attached by the live puller when the email feed is fresh).
+         Guards against the nightly source lagging behind the live systems. */
+      if(f.email_live && f.email_live.rec!=null){
+        txt('keREC',comma(f.email_live.rec));
+        txt('keLat','live · as of '+(f.email_live.asof_ct||'')+' CT');
+      }
 
       /* Today's point in the by-day charts. Without this the tables say one thing and the chart beside
          them says another for the SAME day, because only the table row was being patched. */
@@ -349,7 +356,7 @@
         txt('vLat2',f.generated_at_ct+' CT');
       }
       /* tvCn is deliberately NOT stamped "live". The chat tile's VALUE is never patched — chat stays on
-         the Zoho build so CHAT_SAMEDAY keeps applying — so claiming live freshness for it advertised a
+         the built numbers so CHAT_SAMEDAY keeps applying — so claiming live freshness for it advertised a
          build-time number as up-to-the-minute. Invisible on Embody (chat section hidden) but medvi and
          thrive do render it. Its build-time "as of" stamp is the honest one; leave it alone. */
     }).catch(function(){});
