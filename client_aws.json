@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-17T05:20:47-05:00",
- "generated_at_ct": "5:20am",
+ "generated_at": "2026-08-17T10:40:11-05:00",
+ "generated_at_ct": "10:40am",
  "window": {
   "start": "2026-08-10",
   "end": "2026-08-16"
@@ -119,17 +119,17 @@
    }
   },
   "today": {
-   "offered": 0,
-   "answered": 0,
-   "offered_live": 0,
-   "answered_live": 0,
-   "answered_in_sl": 0,
+   "offered": 5,
+   "answered": 4,
+   "offered_live": 5,
+   "answered_live": 4,
+   "answered_in_sl": 4,
    "short_abandoned": 0,
-   "sl_den": 0,
-   "sl": null,
-   "sl_answered_only": null,
-   "asa_s": null,
-   "aht_s": null
+   "sl_den": 5,
+   "sl": 80.0,
+   "sl_answered_only": 80.0,
+   "asa_s": 7.9,
+   "aht_s": 651.1
   }
  },
  "chat_informational": {
@@ -233,7 +233,20 @@
     "hours_ct": "06:00-18:59"
    }
   },
-  "today": null,
+  "today": {
+   "offered": 0,
+   "answered": 6,
+   "offered_live": 6,
+   "answered_live": 6,
+   "answered_in_sl": 6,
+   "short_abandoned": 0,
+   "sl_den": 6,
+   "sl_secs": 30,
+   "sl": 100.0,
+   "asa_s": 7.0,
+   "aht_s": null,
+   "hours_ct": "06:00-18:59"
+  },
   "hours_ct": "06:00-18:59 CT",
   "caveat": "business-hours window only; does NOT exclude chats answered the next day, so SL/ASA here are not comparable to the dashboard's Zoho-sourced chat figures"
  },
@@ -1763,12 +1776,225 @@
     0,
     0
    ]
+  ],
+  "2026-08-17": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    4,
+    4,
+    31658,
+    4,
+    4,
+    0,
+    4
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
   ]
- },
- "email_live": {
-  "rec": null,
-  "clo": null,
-  "asof_ct": "5:18am"
  },
  "errors": [],
  "ok": true
