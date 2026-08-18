@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-18T01:29:45-05:00",
- "generated_at_ct": "1:29am",
+ "generated_at": "2026-08-18T05:29:06-05:00",
+ "generated_at_ct": "5:29am",
  "window": {
   "start": "2026-08-11",
   "end": "2026-08-17"
@@ -1764,6 +1764,11 @@
     0
    ]
   ]
+ },
+ "email_live": {
+  "rec": 1,
+  "clo": null,
+  "asof_ct": "5:25am"
  },
  "errors": [],
  "ok": true
