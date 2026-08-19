@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-19T18:16:19-05:00",
- "generated_at_ct": "6:16pm",
+ "generated_at": "2026-08-19T21:51:17-05:00",
+ "generated_at_ct": "9:51pm",
  "window": {
   "start": "2026-08-12",
   "end": "2026-08-18"
@@ -210,17 +210,17 @@
    }
   },
   "today": {
-   "offered": 20,
-   "answered": 19,
-   "offered_live": 20,
-   "answered_live": 19,
-   "answered_in_sl": 19,
+   "offered": 21,
+   "answered": 21,
+   "offered_live": 21,
+   "answered_live": 21,
+   "answered_in_sl": 21,
    "short_abandoned": 0,
-   "sl_den": 20,
-   "sl": 95.0,
-   "sl_answered_only": 95.0,
-   "asa_s": 8.8,
-   "aht_s": 926.8
+   "sl_den": 21,
+   "sl": 100.0,
+   "sl_answered_only": 100.0,
+   "asa_s": 8.7,
+   "aht_s": 997.1
   }
  },
  "chat_informational": {
@@ -326,12 +326,12 @@
   },
   "today": {
    "offered": 0,
-   "answered": 37,
-   "offered_live": 37,
-   "answered_live": 37,
-   "answered_in_sl": 37,
+   "answered": 39,
+   "offered_live": 39,
+   "answered_live": 39,
+   "answered_in_sl": 39,
    "short_abandoned": 0,
-   "sl_den": 37,
+   "sl_den": 39,
    "sl_secs": 30,
    "sl": 100.0,
    "asa_s": 7.5,
@@ -2032,10 +2032,10 @@
     3
    ],
    [
-    0,
-    0,
-    0,
-    0,
+    1,
+    1,
+    8568,
+    1,
     1,
     0,
     1
@@ -2045,15 +2045,15 @@
     0,
     0,
     0,
+    1,
     0,
-    0,
-    0
+    1
    ],
    [
-    0,
-    0,
-    0,
-    0,
+    1,
+    1,
+    8570,
+    1,
     0,
     0,
     0
@@ -2088,9 +2088,9 @@
   ]
  },
  "email_live": {
-  "rec": 14,
+  "rec": 19,
   "clo": 37,
-  "asof_ct": "6:07pm"
+  "asof_ct": "9:46pm"
  },
  "errors": [],
  "ok": true
