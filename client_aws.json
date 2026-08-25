@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-25T05:26:37-05:00",
- "generated_at_ct": "5:26am",
+ "generated_at": "2026-08-25T07:19:42-05:00",
+ "generated_at_ct": "7:19am",
  "window": {
   "start": "2026-08-18",
   "end": "2026-08-24"
@@ -324,7 +324,20 @@
     "hours_ct": "06:00-18:59"
    }
   },
-  "today": null,
+  "today": {
+   "offered": 0,
+   "answered": 1,
+   "offered_live": 1,
+   "answered_live": 1,
+   "answered_in_sl": 1,
+   "short_abandoned": 0,
+   "sl_den": 1,
+   "sl_secs": 30,
+   "sl": 100.0,
+   "asa_s": 6.1,
+   "aht_s": null,
+   "hours_ct": "06:00-18:59"
+  },
   "hours_ct": "06:00-18:59 CT",
   "caveat": "business-hours window only; does NOT exclude chats answered the next day, so SL/ASA here are not comparable to the dashboard's Zoho-sourced chat figures"
  },
@@ -1857,9 +1870,9 @@
   ]
  },
  "email_live": {
-  "rec": 1,
+  "rec": 7,
   "clo": 11,
-  "asof_ct": "5:19am"
+  "asof_ct": "7:12am"
  },
  "errors": [],
  "ok": true
