@@ -1,7 +1,7 @@
 {
  "client": "thrive",
- "generated_at": "2026-08-25T12:25:19-05:00",
- "generated_at_ct": "12:25pm",
+ "generated_at": "2026-08-25T12:53:53-05:00",
+ "generated_at_ct": "12:53pm",
  "window": {
   "start": "2026-08-18",
   "end": "2026-08-24"
@@ -326,12 +326,12 @@
   },
   "today": {
    "offered": 0,
-   "answered": 13,
-   "offered_live": 13,
-   "answered_live": 13,
-   "answered_in_sl": 13,
+   "answered": 14,
+   "offered_live": 14,
+   "answered_live": 14,
+   "answered_in_sl": 14,
    "short_abandoned": 0,
-   "sl_den": 13,
+   "sl_den": 14,
    "sl_secs": 30,
    "sl": 100.0,
    "asa_s": 6.2,
@@ -2088,9 +2088,9 @@
   ]
  },
  "email_live": {
-  "rec": 18,
-  "clo": 12,
-  "asof_ct": "12:21pm"
+  "rec": 19,
+  "clo": 13,
+  "asof_ct": "12:50pm"
  },
  "errors": [],
  "ok": true
