@@ -54,7 +54,7 @@
 <body>
 <div class="wrap">
   <h1>Thrive Le-Vel — Patient Support Performance</h1>
-  <div class="sub">Aug 27–Sep 2, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b id="hdrStamp">updated 1:28am CDT</b></div>
+  <div class="sub">Aug 27–Sep 2, 2026 · Voice · Email · Chat · Thrive Le-Vel · Central Time · <b id="hdrStamp">updated 5:31am CDT</b></div>
   
   <div id="pane-sum">
 
@@ -62,7 +62,7 @@
   <div class="grid kpis">
     <div class="card"><div class="k">Voice — calls</div><div class="v" id="tvV">0</div><div class="n" id="tvVn">as of Wed 9/2, ~5p CT</div></div>
     <div class="card"><div class="k">Email — received</div><div class="v" id="keREC">0</div><div class="n" id="keLat">as of Wed 9/2, ~11:30p CT</div></div>
-    <div class="card"><div class="k">Email — open backlog</div><div class="v">22</div><div class="n">as of Wed 9/2, ~11:30p CT</div></div>
+    <div class="card"><div class="k">Email — open backlog</div><div class="v">13</div><div class="n">as of Wed 9/2, ~11:30p CT</div></div>
     <div class="card"><div class="k">Chat — chats</div><div class="v" id="tvC">0</div><div class="n" id="tvCn">as of Wed 9/2, ~5p CT</div></div>
   </div>
 
@@ -113,12 +113,12 @@
   <div class="sec">Email <span style="font-weight:400;color:var(--mut);font-size:12px;" id="eStamp">· updated through Wed 9/2, ~11:30p CT</span></div>
   <div class="grid kpis">
     <div class="card"><div class="k">Received</div><div class="v" id="keREC2">0</div><div class="n">Thu Sep 03 so far</div></div>
-    <div class="card"><div class="k">Resolved</div><div class="v" id="keRES">0</div><div class="n">Thu Sep 03 so far</div></div>
+    <div class="card"><div class="k">Resolved</div><div class="v" id="keRES">6</div><div class="n">Thu Sep 03 so far</div></div>
     <!-- FRT stays on the MATURED window (d0..yesterday), NOT today: a ticket created an hour ago has not
          had 4 hours to be replied to, so scoring today understates it badly and build_dashboards' frt
          query deliberately stops at mature_end. Today would read "—" forever. -->
-    <div class="card"><div class="k">First Response ≤4hr</div><div class="v red">35%</div><div class="n">Aug 27–Sep 2 · of replied emails</div></div>
-    <div class="card"><div class="k">First Response ≤24hr</div><div class="v grn">88%</div><div class="n">Aug 27–Sep 2 · of replied emails</div></div>
+    <div class="card"><div class="k">First Response ≤4hr</div><div class="v red">33%</div><div class="n">Aug 27–Sep 2 · of replied emails</div></div>
+    <div class="card"><div class="k">First Response ≤24hr</div><div class="v grn">89%</div><div class="n">Aug 27–Sep 2 · of replied emails</div></div>
   </div>
   <div class="lbl">By Day <span style="font-weight:400;color:var(--mut);font-size:12px;">· Aug 20–Sep 2 plus today</span></div>
   <table>
@@ -138,9 +138,9 @@
       <tr><td>Sun 8/30</td><td>15</td><td>23</td><td class="grn">-8</td><td class="grn">93%</td></tr>
       <tr><td>Mon 8/31</td><td>24</td><td>19</td><td>+5</td><td class="red">9%</td></tr>
       <tr><td>Tue 9/1</td><td>20</td><td>33</td><td class="grn">-13</td><td class="red">8%</td></tr>
-      <tr><td>Wed 9/2</td><td>18</td><td>21</td><td class="grn">-3</td><td class="red">25%</td></tr>
-      <tr class="tot"><td>Aug 27–Sep 2</td><td>131</td><td>172</td><td>-41</td><td class="red">35%</td></tr>
-      <tr class="amb" id="eTodayRow"><td>Thu 9/3*</td><td>0</td><td>0</td><td>+0</td><td>—</td></tr>
+      <tr><td>Wed 9/2</td><td>18</td><td>24</td><td class="grn">-6</td><td class="red">10%</td></tr>
+      <tr class="tot"><td>Aug 27–Sep 2</td><td>131</td><td>175</td><td>-44</td><td class="red">33%</td></tr>
+      <tr class="amb" id="eTodayRow"><td>Thu 9/3*</td><td>0</td><td>6</td><td>-6</td><td>—</td></tr>
     </tbody>
   </table>
   <div class="note">* partial day — email to <span class="eLat">Wed 9/2, ~11:30p CT</span></div>
@@ -263,7 +263,7 @@
   var VOFF={'8/27':[0,0,0,0,0,0,0,1,2,1,1,2,1,4,0,2,3,1,1,0,1,1,0,0],'8/28':[0,0,0,0,0,0,0,1,0,2,3,3,4,0,1,0,1,0,1,0,0,0,0,0],'8/29':[0,0,0,0,0,0,0,0,0,0,2,1,0,2,0,0,4,1,1,0,0,0,0,0],'8/30':[0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,0],'8/31':[0,0,0,0,0,0,0,2,0,4,3,0,4,2,6,2,2,1,1,0,3,0,0,0],'9/1':[0,0,0,0,0,0,0,4,0,1,1,1,3,0,1,4,2,1,0,0,0,0,0,0],'9/2':[0,0,0,0,0,0,0,0,0,1,2,3,1,1,3,2,4,1,0,0,0,0,0,0],'9/3':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
   var CHOFF={'8/27':[0,0,0,0,0,0,0,0,0,3,3,1,2,8,4,3,5,1,1,3,3,0,0,0],'8/28':[0,0,1,0,0,0,0,0,0,1,0,1,0,3,3,0,2,0,1,1,0,1,1,0],'8/29':[0,0,0,0,0,0,0,0,0,3,1,0,0,1,2,0,1,0,0,3,0,0,0,1],'8/30':[0,0,0,0,0,0,0,2,0,4,1,0,0,1,1,0,0,0,0,0,1,0,2,2],'8/31':[0,0,0,0,0,1,1,3,1,4,2,2,2,5,5,0,1,0,2,0,2,1,0,0],'9/1':[0,0,0,0,0,1,0,2,4,2,1,0,0,1,2,3,4,4,1,4,2,1,1,1],'9/2':[0,1,0,0,0,1,2,0,1,2,3,2,1,4,1,1,0,1,1,1,3,2,0,0],'9/3':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
   var EREC={'8/27':[0,0,0,2,1,0,2,1,2,1,1,2,0,1,2,1,2,4,4,1,0,0,2,0],'8/28':[0,0,0,0,0,0,1,1,0,1,1,2,1,0,1,1,1,0,0,0,0,0,0,0],'8/29':[0,0,0,0,0,0,3,1,1,2,1,1,1,1,1,0,0,1,0,1,1,0,0,0],'8/30':[0,0,0,0,0,0,4,1,1,1,0,0,1,0,0,0,1,0,1,0,3,0,1,1],'8/31':[0,0,0,0,5,0,0,1,1,4,1,3,1,2,2,1,1,0,1,0,0,1,0,0],'9/1':[0,0,0,1,0,0,2,0,2,2,0,4,0,0,1,0,2,2,1,0,1,1,1,0],'9/2':[0,0,0,0,0,0,2,0,0,1,1,1,0,2,2,3,1,2,0,1,1,1,0,0],'9/3':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
-  var ECLO={'8/27':[0,1,0,4,3,4,1,1,3,2,0,2,2,0,1,0,0,1,1,0,0,3,1,3],'8/28':[2,0,4,0,6,5,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0],'8/29':[0,0,1,5,9,1,0,0,1,1,3,0,0,0,0,0,0,1,0,0,0,0,0,0],'8/30':[0,0,0,1,1,0,0,0,1,0,1,0,0,2,1,1,1,0,0,0,0,4,5,5],'8/31':[4,4,0,0,0,0,1,0,0,1,0,0,0,1,1,0,0,1,0,0,2,1,2,1],'9/1':[4,0,0,4,3,3,3,1,0,0,0,2,0,0,0,0,0,0,1,0,0,4,3,5],'9/2':[1,1,0,1,1,4,1,0,0,1,1,0,0,0,0,1,0,0,0,0,1,3,4,1],'9/3':[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
+  var ECLO={'8/27':[0,1,0,4,3,4,1,1,3,2,0,2,2,0,1,0,0,1,1,0,0,3,1,3],'8/28':[2,0,4,0,6,5,1,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0],'8/29':[0,0,1,5,9,1,0,0,1,1,3,0,0,0,0,0,0,1,0,0,0,0,0,0],'8/30':[0,0,0,1,1,0,0,0,1,0,1,0,0,2,1,1,1,0,0,0,0,4,5,5],'8/31':[4,4,0,0,0,0,1,0,0,1,0,0,0,1,1,0,0,1,0,0,2,1,2,1],'9/1':[4,0,0,4,3,3,3,1,0,0,0,2,0,0,0,0,0,0,1,0,0,4,3,5],'9/2':[1,1,0,1,1,4,1,0,0,1,1,0,0,0,0,1,0,0,0,0,1,3,4,4],'9/3':[4,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]};
   var hrs=[]; for(var h=0;h<24;h++){hrs.push((h%12===0?12:h%12)+(h<12?'a':'p'));}
   var sum=function(a){return a.reduce(function(x,y){return x+y;},0);};
   var xh={grid:{display:false},ticks:{color:mut,font:{size:10},maxRotation:0,autoSkip:false,callback:function(v,i){return i%3===0?hrs[i]:'';}}};
